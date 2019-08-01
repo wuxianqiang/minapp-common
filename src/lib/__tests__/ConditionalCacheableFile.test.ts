@@ -13,7 +13,7 @@ let file: string
 beforeAll(() => (file = path.join(os.tmpdir(), 'test.txt')))
 afterEach(() => fs.existsSync(file) && fs.removeSync(file))
 
-describe('getFilePath', () => {
+describe.skip('getFilePath', () => {
   test('should get exists file content', async () => {
     fs.writeFileSync(file, 'abc')
     let f = new ConditionalCacheableFile(() => file)
@@ -68,7 +68,7 @@ describe('getFilePath', () => {
   })
 })
 
-describe('parseFileContent', () => {
+describe.skip('parseFileContent', () => {
   test('should return undefined when file is not exists', async () => {
     let f = new ConditionalCacheableFile(() => undefined, (filename, buf) => 'abc')
     let c = await f.getContent()

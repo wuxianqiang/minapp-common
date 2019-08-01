@@ -9,7 +9,7 @@ import * as path from 'path'
 import * as fs from 'fs-extra'
 import { sleep } from 'mora-common/util/delay'
 
-describe('error', () => {
+describe.skip('error', () => {
   test('throws when no file exists', async () => {
     let f = new CacheableFile('aaaa_bbbb')
     let c = 0
@@ -24,7 +24,7 @@ describe('error', () => {
   })
 })
 
-describe('basic', () => {
+describe.skip('basic', () => {
   let file: string
   beforeAll(() => (file = path.join(os.tmpdir(), 'test.txt')))
   afterEach(() => fs.existsSync(file) && fs.unlinkSync(file))
