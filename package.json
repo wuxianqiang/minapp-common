@@ -14,7 +14,8 @@
     "prepare": "npm run lint && npm run test && npm run build"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   },
   "license": "MIT",
   "author": "Mora <qiuzhongleiabc@126.com> (https://github.com/qiu8310)",
